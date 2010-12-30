@@ -1,3 +1,9 @@
 [user]
 	name = Juvenn Woo
 	email = jv@walkingcloud.org
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset %s %Cgreen(%cr) %C(yellow)%d%Creset' --abbrev-commit --date=relative
