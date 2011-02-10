@@ -33,6 +33,11 @@ set foldmethod=syntax
 set textwidth=72
 set fo+=t
 
+set enc=utf-8
+" order is significant
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+
+
 set laststatus=2
 "set statusline=%{GetGitBranch()}
 "set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
