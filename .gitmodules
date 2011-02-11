@@ -16,3 +16,6 @@
 [submodule "bundle/conqueterm"]
 	path = bundle/conqueterm
 	url = git://github.com/vim-scripts/Conque-Shell.git
+[submodule "bundle/vimim"]
+	path = bundle/vimim
+	url = git://github.com/vim-scripts/VimIM.git
