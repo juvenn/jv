@@ -55,6 +55,9 @@ set directory=~/.vim/tmp
 " Backspace is allowed to delete the specific characters.
 set backspace=indent,eol,start
 
+" Ack setup
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 """"""""""superTab.vim""""""""""""""
 set completeopt+=longest
 let g:SuperTabDefaultCompletionType = 'context'

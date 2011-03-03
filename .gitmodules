@@ -19,3 +19,6 @@
 [submodule "bundle/vimim"]
 	path = bundle/vimim
 	url = git://github.com/vim-scripts/VimIM.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
