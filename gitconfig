@@ -9,3 +9,4 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset %s %Cgreen(%cr) %C(yellow)%d%Creset' --abbrev-commit --date=relative
 [core]
 	editor = vim
+	excludesfile = ~/.vim/gitignore
