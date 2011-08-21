@@ -23,6 +23,7 @@ set incsearch		" Incremental search
 set autowrite		" Automatically save before commands like :next and :make
 set hidden              " Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes) in terminals
+set cul 		" Highlight cursor line
 
 set number              " Show line number
 set history=50
@@ -47,6 +48,8 @@ let format="%Y-%m-%d %a"
 set printheader=%<Juvenn\ Woo\ \ %{strftime(format)}%=Page\ %N
 
 set noeb
+
+inoremap jj <ESC>
 
 
 " swap files to put
