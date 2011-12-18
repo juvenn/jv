@@ -31,3 +31,6 @@
 [submodule "/home/jv/.vim/bundle/gundo"]
 	path = /home/jv/.vim/bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/r-plugin"]
+	path = bundle/r-plugin
+	url = https://github.com/jcfaria/Vim-R-plugin.git
