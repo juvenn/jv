@@ -8,3 +8,5 @@
 [core]
 	editor = vim
 	excludesfile = ~/.vim/gitignore
+[push]
+	default = simple
