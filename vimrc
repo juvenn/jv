@@ -1,13 +1,5 @@
-runtime! debian.vim
 
-filetype off 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
-syntax on
-
-set background=dark
-colorscheme mustang
+execute pathogen#infect()
 
 if has("autocmd")
   filetype plugin indent on
@@ -29,15 +21,35 @@ set number              " Show line number
 set history=50
 set ruler
 set hlsearch
-set shiftwidth=2
+set shiftwidth=4
+set expandtab           " Auto indent with spaces instead of tab
 set foldmethod=syntax
-set textwidth=72
+set textwidth=78
 set fo+=t
 
 set enc=utf-8
 " order is significant
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 
+syntax enable
+
+if has('gui_running')
+  set guioptions-=T
+  set background=dark
+  " set guifont=Monaco\ 10
+  " Turn off toolbar and menu
+  "set guioptions-=m
+else
+  set background=dark
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
+end
+" colorscheme solarized
+colorscheme mustang
+
+set noimdisable
+autocmd! InsertLeave * set imdisable|set iminsert=0
+autocmd! InsertEnter * set noimdisable|set iminsert=0
 
 set laststatus=2
 "set statusline=%{GetGitBranch()}
@@ -58,15 +70,20 @@ set directory=~/.vim/tmp
 " Backspace is allowed to delete the specific characters.
 set backspace=indent,eol,start
 
+let mapleader = "\<Space>"
+
 " Ack setup
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg="ag --nocolor --nogroup --column"
+nmap <leader>a :Ack<space>
+
+let g:airline_theme = 'molokai'
 
 """"""""""superTab.vim""""""""""""""
 set completeopt+=longest
 let g:SuperTabDefaultCompletionType = 'context'
 let g:SuperTabLongestHighlight = 1
 
-let mapleader = ","
 
 """"""""netrw""""""""""""""
 let g:netrw_winsize=20 " window size
@@ -88,16 +105,4 @@ let g:proj_flags = 'cimstL'
 
 """"""""snipMate.vim""""""""""""
 let g:snips_author = 'Juvenn Woo'
-
-nmap <leader>a :Ack<space>
-
-" gvim 
-if has('gui_running')
-  set encoding=utf-8
-  set guifont=Monaco\ 10
-  " Turn off toolbar and menu
-  set guioptions-=T
-  "set guioptions-=m
-  colorscheme mustang
-end
 

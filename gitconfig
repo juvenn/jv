@@ -1,12 +1,25 @@
 [user]
 	name = Juvenn Woo
 	email = machese@gmail.com
+	signingkey = A0E27BBC3F48491A
 [color]
 	ui = auto
 [alias]
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset %s %Cgreen(%cr) %C(yellow)%d%Creset' --abbrev-commit --date=relative
+        prune-merged = ! git branch --merged | egrep -v '(master|dev)' | xargs git branch -d
 [core]
 	editor = vim
 	excludesfile = ~/.vim/gitignore
+	autocrlf = input
 [push]
 	default = simple
+[gitreview]
+	scheme = https
+	port = 443
+	username = juvenn
+[commit]
+        # gpgsign = true
+[github]
+	user = juvenn
+[commit]
+	gpgsign = true
